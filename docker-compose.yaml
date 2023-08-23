@@ -1,6 +1,8 @@
 version: "3.9"
 services:
   cli:
+    environment:
+      PHP_IDE_CONFIG: "serverName=phpstorm"
     build:
       dockerfile: .docker/Dockerfile.local
       context: .
