@@ -5,6 +5,8 @@ services:
       dockerfile: .docker/Dockerfile.local
       context: .
     working_dir: /app
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     volumes:
       - ./:/app
       - ~/.composer/cache/:/tmp/cache/
